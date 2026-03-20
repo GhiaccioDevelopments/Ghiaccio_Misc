@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Death Screen</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div id="deathScreen" class="death-screen hidden">
+        <div class="death-container">
+            <div class="timer-label">
+                <svg class="clock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>Tempo Rimasto</span>
+            </div>
+            
+            <div class="timer-value" id="timerValue">05:00</div>
+            
+            <div class="respawn-hint" id="respawnHint">
+                <span>Premi</span>
+                <span class="key-badge">SHIFT + SPAZIO</span>
+                <span>per chiamare i medici</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ban Armi UI -->
+    <div id="banArmiScreen" class="ban-armi-screen hidden">
+        <div class="ban-armi-container">
+            <div class="ban-title">BAN ARMI</div>
+            <div class="ban-subtitle" id="banReason">reason</div>
+            <div class="ban-timer-label">Tempo Ban: <span id="banTimerValue">00:00:00</span></div>
+            <div class="ban-progress-container">
+                <div class="ban-progress-bar" id="banProgressBar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu F5 UI -->
+    <div class="menu-wrapper">
+        <div class="menu-panel">
+
+            <!-- Header -->
+            <div class="menu-header">
+                <div class="menu-brand">
+                    <div class="brand-icon-wrap">
+                        <i class="fa-solid fa-bolt brand-icon"></i>
+                    </div>
+                    <div class="brand-text">
+                        <span class="brand-name">UNDERGROUND</span>
+                        <span class="brand-tagline">PANNELLO RAPIDO</span>
+                    </div>
+                </div>
+                <div class="menu-badge">F5</div>
+            </div>
+
+            <!-- Scanning line -->
+            <div class="menu-scan-line"></div>
+
+            <!-- Items -->
+            <div id="circle-menu" class="menu-items"></div>
+
+            <!-- Separator -->
+            <div class="menu-divider-line"></div>
+
+            <!-- Footer keybinds -->
+            <div class="menu-footer">
+                <div class="footer-nav">
+                    <span class="footer-key">↑↓</span>
+                    <span>Naviga</span>
+                </div>
+                <div class="footer-nav">
+                    <span class="footer-key">↵</span>
+                    <span>Conferma</span>
+                </div>
+                <div class="footer-nav">
+                    <span class="footer-key">ESC</span>
+                    <span>Esci</span>
+                </div>
+            </div>
+
+            <!-- Corner decorations -->
+            <div class="menu-corner top-left"></div>
+            <div class="menu-corner top-right"></div>
+            <div class="menu-corner bottom-left"></div>
+            <div class="menu-corner bottom-right"></div>
+
+        </div>
+    </div>
+    
+    <script src="assets/script.js"></script>
+</body>
+</html>
